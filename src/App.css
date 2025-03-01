@@ -1,0 +1,102 @@
+/* Ensure the root container takes full width and height */
+#root {
+  width: 100%;
+  max-width: 100%; /* Removes the previous max-width of 1280px */
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Ensures the entire page does not cause horizontal scrolling */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Ensures no horizontal scrollbar */
+}
+
+/* Ensures all images and banners fit within the screen */
+img, .banner-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure the main container stretches full width */
+.image-upload-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Adjust project banner */
+.project-banner {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Ensure the project information section is responsive */
+.project-info {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Ensures the upload box doesn't stretch unnecessarily */
+.upload-box {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Ensures images fit within containers */
+.preview-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.preview-image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Ensures predictions display properly */
+.predictions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.prediction-box {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  text-align: center;
+}

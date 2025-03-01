@@ -1,0 +1,297 @@
+.image-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color:black;
+    color: silver;
+    padding: 20px;
+  }
+  /* Title Styling */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(45deg, #ffd700, #ffcc33, #ffdd55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.7);
+    animation: shine 3s infinite alternate;
+    letter-spacing: 2px;
+    padding: 10px;
+  }
+  /* High Confidence (≥ 95%) - Green */
+.high-confidence {
+    color: #00ff00; /* Bright Green */
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  
+  /* Medium Confidence (75% - 94%) - Default Color */
+  .medium-confidence {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Low Confidence (< 75%) - Red */
+  .low-confidence {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+
+
+  .predictions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Project Banner */
+.project-banner {
+  text-align: center;
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.rollers {
+  width: 100%; /* Adjust as needed */
+  max-width: 500px; /* Keeps it responsive */
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+
+.project-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Project Info */
+.project-info {
+  background-color: #f8f8f8;
+  border: 2px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+}
+
+.project-info h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Modern Upload Section */
+.upload-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.upload-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-button:hover {
+  background: #0056b3;
+}
+
+/* Prediction Boxes */
+.predictions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prediction-box {
+  font-size: 18px;
+  font-weight: bold;
+  width: 200px;
+  text-align: center;
+}
+
+
+  /* High Confidence (≥ 95%) - Green */
+  .prediction-container.green {
+    color: limegreen;
+  }
+  
+  /* Medium Confidence (75% - 94%) - Default Color */
+  .prediction-container.default {
+    color: white;
+  }
+  
+  /* Low Confidence (< 75%) - Red */
+  .prediction-container.red {
+    color: red;
+  }
+  
+  
+  /* Shine Animation */
+  @keyframes shine {
+    0% {
+      text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.7);
+    }
+    100% {
+      text-shadow: 4px 4px 10px rgba(255, 223, 0, 1);
+    }
+  }
+  
+  
+  /* Upload Box */
+  .upload-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: #1e1e1e;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Upload Input Button */
+  .file-label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: 2px solid silver;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  .file-label:hover {
+    background: #444;
+  }
+  
+  /* Upload Button */
+  .upload-button {
+    width: 100%;
+    padding: 12px;
+    background: gold;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .upload-button:hover {
+    background: #ffcc00;
+  }
+  
+  .upload-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Image Preview */
+  .preview-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  .preview-image {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border: 2px solid gold;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Prediction Result */
+  .prediction-container {
+    margin-top: 20px;
+    padding: 10px;
+    background: #222;
+    border: 2px solid gold;
+    border-radius: 8px;
+    color: gold;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+/* Scrolling Gallery Container */
+.scrolling-gallery {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background-color: black;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Track that holds images (Moves automatically) */
+  .gallery-track {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  /* Coin Images */
+  .gallery-img {
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid gold;
+  }
+  
+  /* Keyframes for continuous scrolling */
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+
+  
