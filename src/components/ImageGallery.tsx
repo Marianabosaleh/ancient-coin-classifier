@@ -6,9 +6,9 @@ const getRandomSize = () => {
   const sizes = [
     // { width: 100, height: 100 },
     // { width: 120, height: 120 },
-    // { width: 150, height: 150 },
+    { width: 150, height: 150 },
     // { width: 180, height: 180 },
-    { width: 180, height: 180 },
+    //{ width: 180, height: 180 },
   ];
   return sizes[Math.floor(Math.random() * sizes.length)];
 };

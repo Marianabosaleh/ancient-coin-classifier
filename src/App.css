@@ -6,6 +6,7 @@
   padding: 2rem;
   text-align: center;
   overflow-x: hidden; /* Prevents horizontal scrolling */
+  background: black;
 }
 
 /* Ensures the entire page does not cause horizontal scrolling */

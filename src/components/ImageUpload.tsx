@@ -10,8 +10,8 @@ interface Prediction {
   color: string;
 }
 
-const API_URL = "https://coin-classifier-backend-130485216686.us-central1.run.app"; // ✅ Update API URL
-
+const API_URL =
+  "https://coin-classifier-backend-130485216686.us-central1.run.app"; // ✅ Update API URL
 
 const ImageUpload: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -57,11 +57,13 @@ const ImageUpload: React.FC = () => {
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
-      
+
       console.log("✅ API Response:", response.data);
 
       // Check if there is a prediction with confidence ≥ 90%
-      const highConfidencePrediction = response.data.predictions.find(pred => pred.confidence >= 90);
+      const highConfidencePrediction = response.data.predictions.find(
+        (pred) => pred.confidence >= 90
+      );
 
       // If a high-confidence prediction exists, only show that one
       if (highConfidencePrediction) {
@@ -69,7 +71,6 @@ const ImageUpload: React.FC = () => {
       } else {
         setPredictions(response.data.predictions);
       }
-
     } catch (err) {
       console.error("❌ Error uploading:", err);
       setError("❌ Failed to classify the coin. Please try again.");
@@ -82,8 +83,12 @@ const ImageUpload: React.FC = () => {
     <div className="image-upload-container">
       {/* 🔹 Modern Project Banner */}
       <div className="project-banner">
-        <img src="/images/pic1.jpeg" alt="Ancient Coins" className="banner-image" />
-        <h1 className="project-title">Ancient Coin Classifier</h1>
+        <h1 className="project-title">Roman Emperos coins Classifier</h1>
+        <img
+          src="/images/pic1.jpeg"
+          alt="Ancient Coins"
+          className="banner-image"
+        />
       </div>
 
       <div className="upload-box">
@@ -95,15 +100,27 @@ const ImageUpload: React.FC = () => {
         )}
 
         {/* File Upload Input */}
-        <input type="file" onChange={handleFileChange} accept="image/*" id="upload" hidden />
+        <input
+          type="file"
+          onChange={handleFileChange}
+          accept="image/*"
+          id="upload"
+          hidden
+        />
         <label htmlFor="upload" className="file-label">
           {selectedFile ? "Change Image" : "Select Image"}
         </label>
-        {selectedFile && <p className="selected-file">Selected: {selectedFile.name}</p>}
+        {selectedFile && (
+          <p className="selected-file">Selected: {selectedFile.name}</p>
+        )}
 
         {/* Upload & Classify Button */}
-        <button onClick={handleUpload} disabled={loading} className="upload-button">
-          {loading ? "Classifying..." : "Upload & Classify"}
+        <button
+          onClick={handleUpload}
+          disabled={loading}
+          className="upload-button"
+        >
+          {loading ? "Classifying..." : "Classify"}
         </button>
 
         {/* Error Message */}
@@ -139,38 +156,59 @@ const ImageUpload: React.FC = () => {
 
       {/* 🔹 Enhanced Project Information Section */}
       <div className="project-info">
-        <h1>🏛 Roman Coin Classification System</h1>
         <h2>About the Project</h2>
         <p>
-          This project is an advanced Roman Coin Classification System that identifies Roman emperors based on coin images.
-          Using deep learning, the model can analyze historical coins and determine which emperor issued them.
-          It provides a confidence score to indicate how certain it is about each classification.
+          This project is an advanced Roman Coin Classification System that
+          identifies Roman emperors based on coin images. Using deep learning,
+          the model can analyze historical coins and determine which emperor
+          issued them. It provides a confidence score to indicate how certain it
+          is about each classification.
         </p>
 
         <h2>How It Works</h2>
         <p>
-          Our model processes the engraved details, inscriptions, and artistic style of the coins to classify them into the correct emperor.
-          It has been trained on thousands of images to distinguish between 52 different emperors with high accuracy.
+          Our model processes the engraved details, inscriptions, and artistic
+          style of the coins to classify them into the correct emperor. It has
+          been trained on thousands of images to distinguish between 52
+          different emperors with high accuracy.
         </p>
 
-        <img src="/images/rollers.jpeg" alt="rollers" className="rollers" />
+        <img src="/images/rollers.jpeg" />
 
         <h2>Training Data</h2>
         <ul>
-          <li><strong>Number of emperors classified:</strong> 52</li>
-          <li><strong>Total number of images in dataset:</strong> 83,588</li>
-          <li><strong>Training & Testing Split:</strong> 70% training, 30% testing</li>
+          <li>
+            <strong>Number of emperors classified:</strong> 52
+          </li>
+          <li>
+            <strong>Total number of images in dataset:</strong> 83,588
+          </li>
+          <li>
+            <strong>Training & Testing Split:</strong> 70% training, 30% testing
+          </li>
         </ul>
 
         <h2>Model Features</h2>
         <ul>
-          <li>Highly accurate classification using convolutional neural networks (CNNs)</li>
+          <li>
+            Highly accurate classification using convolutional neural networks
+            (CNNs)
+          </li>
           <li>User uploads an image, and the model predicts the emperor</li>
-          <li>Color-coded confidence levels:
+          <li>
+            Color-coded confidence levels:
             <ul>
-              <li><span className="green-label">Green (≥90%)</span> - Highly certain</li>
-              <li><span className="orange-label">Orange (60%-90%)</span> - Medium confidence</li>
-              <li><span className="red-label">Red (≤60%)</span> - Low confidence</li>
+              <li>
+                <span className="green-label">Green (≥90%)</span> - Highly
+                certain
+              </li>
+              <li>
+                <span className="orange-label">Orange (60%-90%)</span> - Medium
+                confidence
+              </li>
+              <li>
+                <span className="red-label">Red (≤60%)</span> - Low confidence
+              </li>
             </ul>
           </li>
         </ul>
@@ -178,9 +216,15 @@ const ImageUpload: React.FC = () => {
         <h2>Developed By</h2>
         <p>This project was created by:</p>
         <ul>
-          <li><strong>Marian Abosaleh</strong></li>
-          <li><strong>Ronen Saad</strong></li>
-          <li><strong>Sahar Ibraheem</strong></li>
+          <li>
+            <strong>Marian Abosaleh</strong>
+          </li>
+          <li>
+            <strong>Ronen Saad</strong>
+          </li>
+          <li>
+            <strong>Sahar Ibraheem</strong>
+          </li>
         </ul>
       </div>
     </div>
