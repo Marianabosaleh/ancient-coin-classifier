@@ -189,6 +189,35 @@ const ImageUpload: React.FC = () => {
           </li>
         </ul>
 
+        <h2>Credits & Data Sources</h2>
+<p>
+  Our model was trained using the dataset that we built using publicly available datasets from reputable numismatic sources. 
+  We acknowledge the following resources for their invaluable data:
+</p>
+<ul className="data-sources">
+  <li>
+    <a href="https://numismatics.org/ocre/search" target="_blank" rel="noopener noreferrer" color="#ccc">
+      Online Coins of the Roman Empire (OCRE)
+    </a>
+  </li>
+  <li>
+    <a href="https://www.coinarchives.com/a/" target="_blank" rel="noopener noreferrer">
+      CoinArchives - Historical Coin Auctions
+    </a>
+  </li>
+  <li>
+    <a href="https://www.cngcoins.com/Coins_sold.aspx" target="_blank" rel="noopener noreferrer">
+      Classical Numismatic Group (CNG) - Coins Sold
+    </a>
+  </li>
+  <li>
+    <a href="https://www.britishmuseum.org/collection" target="_blank" rel="noopener noreferrer">
+      British Museum - Collection Database
+    </a>
+  </li>
+</ul>
+
+
         <h2>Model Features</h2>
         <ul>
           <li>

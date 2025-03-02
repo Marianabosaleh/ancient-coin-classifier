@@ -56,6 +56,39 @@
   margin: 20px auto;
   border-radius: 8px;
 }
+.data-sources {
+  list-style-type: none;
+  padding: 0;
+}
+
+.data-sources li {
+  margin: 10px 0;
+}
+
+/* Let links inherit the default text color */
+.data-sources a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit; /* Inherits text color from the parent */
+  transition: opacity 0.3s ease;
+}
+
+.data-sources a:hover {
+  opacity: 0.7; /* Slight transparency effect on hover */
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+  .data-sources {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .data-sources a {
+    display: block;
+    margin: 5px 0;
+  }
+}
 
 
 .project-title {
