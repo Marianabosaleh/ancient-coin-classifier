@@ -214,7 +214,10 @@ const ImageUpload: React.FC = () => {
         </ul>
 
         <h2>Developed By</h2>
-        <p>This project was created by:</p>
+        <p>
+          This project was created by three computer science students at Ariel
+          University.
+        </p>
         <ul>
           <li>
             <strong>Marian Abosaleh</strong>
