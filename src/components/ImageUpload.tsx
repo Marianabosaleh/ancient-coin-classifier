@@ -107,12 +107,13 @@ const ImageUpload: React.FC = () => {
           id="upload"
           hidden
         />
+         {selectedFile && (
+          <p className="selected-file">Selected: {selectedFile.name}</p>
+        )}
         <label htmlFor="upload" className="file-label">
           {selectedFile ? "Change Image" : "Select Image"}
         </label>
-        {selectedFile && (
-          <p className="selected-file">Selected: {selectedFile.name}</p>
-        )}
+       
 
         {/* Upload & Classify Button */}
         <button
